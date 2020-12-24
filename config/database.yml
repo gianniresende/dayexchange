@@ -1,23 +1,24 @@
 default: &default
-adapter: postgresql
-encoding: unicode
-pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-host: db
-user: postgres
-password: <%= ENV['DB_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: "172.18.0.2"
+  port: "5432"
+  user: postgres
+  password: <%= ENV['DB_PASSWORD'] %>
 
 
 development:
-<<: *default
-database: onebit_exchange_development
+  <<: *default
+  database: onebit_exchange_development
 
 
 test:
-<<: *default
-database: onebit_exchange_test
+  <<: *default
+  database: onebit_exchange_test
 
 
 production:
-<<: *default
-database: onebit_exchange_production
-username: onebit_exchange
+  <<: *default
+  database: onebit_exchange_production
+  username: onebit_exchange

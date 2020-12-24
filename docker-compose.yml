@@ -21,7 +21,6 @@ services:
       - gems:/gems
     depends_on:
       - db
-    network_mode: bridge  
 
 volumes:
   postgres:
