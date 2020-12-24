@@ -1,5 +1,8 @@
 {
-  "name": "onebit_exchange",
+  "engines" : {
+    "node" : ">=12"
+  }, 
+  "name": "dayexchange",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
